@@ -9,6 +9,7 @@ use Illuminate\Contracts\Support\Htmlable;
 use Closure;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -40,7 +41,7 @@ abstract class BaseComponent extends Component
     abstract public function component(): string;
 
     /*----------------------------------------*
-     * Method
+     * HTML
      *----------------------------------------*/
 
     /**
@@ -54,6 +55,10 @@ abstract class BaseComponent extends Component
         return nl2br(htmlspecialchars($text, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8", true));
     }
 
+    /*----------------------------------------*
+     * Auth
+     *----------------------------------------*/
+
     /**
      * whether user is logged in
      * 
@@ -63,6 +68,99 @@ abstract class BaseComponent extends Component
     {
         return Auth::check();
     }
+
+    /*----------------------------------------*
+     * Request
+     *----------------------------------------*/
+
+    /**
+     * get Request instance
+     * 
+     * @return \Illuminate\Http\Request
+     */
+    public function request(): Request
+    {
+        return request();
+    }
+
+    /**
+     * get route name
+     * 
+     * @return string
+     */
+    public function routeName(): string
+    {
+        return $this->request()->route()->getName();
+    }
+
+    /**
+     * whether route name is matched
+     * 
+     * @param string $routeName
+     * @return bool
+     */
+    public function isRouteName(string $routeName): bool
+    {
+        return $this->routeName() === $routeName;
+    }
+
+    /**
+     * whether route name is contained
+     * 
+     * @param string $routeName
+     * @return bool
+     */
+    public function isRouteNameContains(string $routeName): bool
+    {
+        return str_contains($this->routeName(), $routeName);
+    }
+
+    /**
+     * whether route name starts with
+     * 
+     * @param string $routeName
+     * @return bool
+     */
+    public function isRouteNameStartsWith(string $routeName): bool
+    {
+        return str_starts_with($this->routeName(), $routeName);
+    }
+
+    /**
+     * get route prefix
+     * 
+     * @return string
+     */
+    public function routePrefix(): string
+    {
+        return $this->request()->route()->getPrefix();
+    }
+
+    /**
+     * whether route prefix is matched
+     * 
+     * @param string $routePrefix
+     * @return bool
+     */
+    public function isRoutePrefix(string $routePrefix): bool
+    {
+        return $this->routePrefix() === $routePrefix;
+    }
+
+    /**
+     * whether route prefix is contained
+     * 
+     * @param string $routePrefix
+     * @return bool
+     */
+    public function isRoutePrefixContains(string $routePrefix): bool
+    {
+        return str_contains($this->routePrefix(), $routePrefix);
+    }
+
+    /*----------------------------------------*
+     * View
+     *----------------------------------------*/
 
     /**
      * whether user has section

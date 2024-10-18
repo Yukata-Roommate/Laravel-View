@@ -4,8 +4,6 @@ namespace YukataRm\Laravel\View\Component\Layout\Pages\Sidebar;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
-use YukataRm\Laravel\View\Trait\Url;
-
 /**
  * Layout Pages Sidebar Item Component
  * 
@@ -13,8 +11,6 @@ use YukataRm\Laravel\View\Trait\Url;
  */
 class Item extends Component
 {
-    use Url;
-
     /*----------------------------------------*
      * Constructor
      *----------------------------------------*/
@@ -29,7 +25,7 @@ class Item extends Component
      */
     public function __construct(string $prefix, string $href, string $icon, string $title)
     {
-        $this->setPrefix($prefix);
+        $this->setRoutePrefix($prefix);
         $this->setHref($href);
         $this->setIcon($icon);
         $this->setTitle($title);
@@ -42,11 +38,11 @@ class Item extends Component
      *----------------------------------------*/
 
     /**
-     * url prefix
+     * route prefix
      * 
      * @var string
      */
-    public string $prefix;
+    public string $routePrefix;
 
     /**
      * href
@@ -81,14 +77,14 @@ class Item extends Component
      *---------------------------------------*/
 
     /**
-     * set url prefix
+     * set route prefix
      * 
-     * @param string $prefix
+     * @param string $routePrefix
      * @return void
      */
-    public function setPrefix(string $prefix): void
+    public function setRoutePrefix(string $routePrefix): void
     {
-        $this->prefix = $prefix;
+        $this->routePrefix = $routePrefix;
     }
 
     /**
@@ -131,6 +127,8 @@ class Item extends Component
      */
     public function setNavLinkClass(): void
     {
-        $this->navLinkClass = $this->isUrlStartsWith() ? "nav-link active" : "nav-link";
+        $this->navLinkClass = $this->isRouteNameStartsWith($this->routePrefix)
+            ? "nav-link active"
+            : "nav-link";
     }
 }

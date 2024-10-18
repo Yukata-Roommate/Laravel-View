@@ -5,11 +5,11 @@ namespace YukataRm\Laravel\View\Component\Layout\Pages;
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Layout Pages Alert Component
+ * Layout Pages Alerts Component
  * 
  * @package YukataRm\Laravel\View\Component\Layout\Pages
  */
-class Alert extends Component
+class Alerts extends Component
 {
     /*----------------------------------------*
      * Constructor

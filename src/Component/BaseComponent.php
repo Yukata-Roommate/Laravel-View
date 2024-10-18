@@ -22,7 +22,7 @@ abstract class BaseComponent extends Component
      */
     public function component(): string
     {
-        return "{$this->prefix}::{$this->componentKey()}";
+        return "{$this->componentPrefix}::{$this->componentKey()}";
     }
 
     /**
@@ -32,7 +32,13 @@ abstract class BaseComponent extends Component
      */
     protected function componentKey(): string
     {
-        return strtolower(str_replace("\\", ".", str_replace($this->namespace, "", get_class($this))));
+        $class = str_replace($this->namespace, "", get_class($this));
+
+        $component = str_replace("\\", ".", $class);
+
+        $kebab = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', $component));
+
+        return str_replace(".-", ".", $kebab);
     }
 
     /*----------------------------------------*
@@ -44,7 +50,7 @@ abstract class BaseComponent extends Component
      * 
      * @var string
      */
-    protected string $prefix = "yukata-rm";
+    protected string $componentPrefix = "yukata-rm";
 
     /**
      * component common namespace

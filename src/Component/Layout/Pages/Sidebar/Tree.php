@@ -4,8 +4,6 @@ namespace YukataRm\Laravel\View\Component\Layout\Pages\Sidebar;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
-use YukataRm\Laravel\View\Trait\Url;
-
 /**
  * Layout Pages Sidebar Tree Component
  * 
@@ -13,8 +11,6 @@ use YukataRm\Laravel\View\Trait\Url;
  */
 class Tree extends Component
 {
-    use Url;
-
     /*----------------------------------------*
      * Constructor
      *----------------------------------------*/
@@ -28,7 +24,7 @@ class Tree extends Component
      */
     public function __construct(string $prefix, string $icon, string $title)
     {
-        $this->setPrefix($prefix);
+        $this->setRoutePrefix($prefix);
         $this->setIcon($icon);
         $this->setTitle($title);
 
@@ -42,11 +38,11 @@ class Tree extends Component
      *----------------------------------------*/
 
     /**
-     * url prefix
+     * route prefix
      * 
      * @var string
      */
-    public string $prefix;
+    public string $routePrefix;
 
     /**
      * icon
@@ -88,14 +84,14 @@ class Tree extends Component
      *---------------------------------------*/
 
     /**
-     * set url prefix
+     * set route prefix
      * 
-     * @param string $prefix
+     * @param string $routePrefix
      * @return void
      */
-    public function setPrefix(string $prefix): void
+    public function setRoutePrefix(string $routePrefix): void
     {
-        $this->prefix = $prefix;
+        $this->routePrefix = $routePrefix;
     }
 
     /**
@@ -127,7 +123,9 @@ class Tree extends Component
      */
     public function setNavItemClass(): void
     {
-        $this->navItemClass = $this->isUrlMatched() ? "nav-item menu-open" : "nav-item";
+        $this->navItemClass = $this->isRouteNameStartsWith($this->routePrefix)
+            ? "nav-item menu-open"
+            : "nav-item";
     }
 
     /**
@@ -137,7 +135,9 @@ class Tree extends Component
      */
     public function setNavLinkClass(): void
     {
-        $this->navLinkClass = $this->isUrlStartsWith() ? "nav-link active" : "nav-link";
+        $this->navLinkClass = $this->isRouteNameStartsWith($this->routePrefix)
+            ? "nav-link active"
+            : "nav-link";
     }
 
     /**
@@ -147,7 +147,7 @@ class Tree extends Component
      */
     public function setNavStyle(): void
     {
-        $this->navStyle = $this->isUrlStartsWith()
+        $this->navStyle = $this->isRouteNameStartsWith($this->routePrefix)
             ? "box-sizing: border-box; display: block;"
             : "box-sizing: border-box; display: none;";
     }

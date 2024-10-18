@@ -20,13 +20,11 @@ class Auth extends Component
      * 
      * @param string $cardTitle
      * @param string $action
-     * @param string $footer
      */
-    public function __construct(string $cardTitle, string $action, string $footer)
+    public function __construct(string $cardTitle, string $action)
     {
         $this->setCardTitle($cardTitle);
         $this->setAction($action);
-        $this->setFooter($footer);
     }
 
     /*----------------------------------------*
@@ -54,13 +52,6 @@ class Auth extends Component
      */
     public string $action;
 
-    /**
-     * footer
-     * 
-     * @var string
-     */
-    public string $footer;
-
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
@@ -85,16 +76,5 @@ class Auth extends Component
     public function setAction(string $action): void
     {
         $this->action = $action;
-    }
-
-    /**
-     * set footer
-     * 
-     * @param string $footer
-     * @return void
-     */
-    public function setFooter(string $footer): void
-    {
-        $this->footer = $footer;
     }
 }
