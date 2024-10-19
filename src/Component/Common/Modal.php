@@ -18,12 +18,14 @@ class Modal extends Component
     /**
      * constructor
      * 
-     * @param string $id
+     * @param string $modalId
+     * @param string|null $title
      * @param bool|null $isStrict
      */
-    public function __construct(string $id, bool|null $isStrict = null)
+    public function __construct(string $modalId, string|null $title = null, bool|null $isStrict = null)
     {
-        $this->setId($id);
+        $this->setId($modalId);
+        $this->setTitle($title);
         $this->setIsStrict($isStrict);
     }
 
@@ -74,6 +76,13 @@ class Modal extends Component
     public string $ariaLabelledBy;
 
     /**
+     * title
+     * 
+     * @var string|null
+     */
+    public string|null $title;
+
+    /**
      * is strict
      * 
      * @var bool
@@ -94,6 +103,17 @@ class Modal extends Component
     {
         $this->id             = $id;
         $this->ariaLabelledBy = "{$id}Label";
+    }
+
+    /**
+     * set title
+     * 
+     * @param string|null $title
+     * @return void
+     */
+    public function setTitle(string|null $title): void
+    {
+        $this->title = $title;
     }
 
     /**

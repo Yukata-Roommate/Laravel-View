@@ -2,7 +2,13 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                {{ $header }}
+                @isset($title)
+                    <x-yukata-rm::common.modal.title :title="$title" />
+                @endisset
+
+                @isset($header)
+                    {{ $header }}
+                @endisset
             </div>
 
             <div class="modal-body">
