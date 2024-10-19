@@ -1,4 +1,3 @@
-<div id="{{ $id }}" class="{{ $class }}" aria-labelledby="{{ $ariaLabelledBy }}" role="tabpanel"
-    tabindex="0">
+<div {{ $attributes->merge($merge) }}>
     {{ $slot }}
 </div>

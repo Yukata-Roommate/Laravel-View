@@ -1,6 +1,6 @@
-<nav class="d-flex justify-items-center justify-content-between align-items-center">
+<nav {{ $attributes->merge($merge) }}>
     <ul class="pagination mb-0">
-        @if ($data->onFirstPage())
+        @if ($onFirstPage)
             <li class="page-item disabled" aria-disabled="true" aria-label="Previous">
                 <span class="page-link" aria-hidden="true">
                     &lsaquo;
@@ -8,13 +8,13 @@
             </li>
         @else
             <li class="page-item">
-                <a class="page-link" href="{{ $data->previousPageUrl() }}" rel="prev" aria-label="Previous">
+                <a class="page-link" href="{{ $previousPageUrl }}" rel="prev" aria-label="Previous">
                     &lsaquo;
                 </a>
             </li>
         @endif
 
-        @foreach ($data->linkCollection() as $link)
+        @foreach ($links as $link)
             @continue($loop->first || $loop->last)
 
             <li class="page-item {{ $link['active'] ? 'active' : '' }}">
@@ -26,9 +26,9 @@
             </li>
         @endforeach
 
-        @if ($data->hasMorePages())
+        @if ($hasMorePages)
             <li class="page-item">
-                <a class="page-link" href="{{ $data->nextPageUrl() }}" rel="next" aria-label="Next">
+                <a class="page-link" href="{{ $nextPageUrl }}" rel="next" aria-label="Next">
                     &rsaquo;
                 </a>
             </li>
@@ -43,11 +43,11 @@
 
     <div class="d-none d-sm-block">
         <p class="small text-muted">
-            <span class="fw-semibold">{{ $data->firstItem() }}</span>
+            <span class="fw-semibold">{{ $firstItem }}</span>
             -
-            <span class="fw-semibold">{{ $data->lastItem() }}</span>
+            <span class="fw-semibold">{{ $lastItem }}</span>
             of
-            <span class="fw-semibold">{{ $data->total() }}</span>
+            <span class="fw-semibold">{{ $total }}</span>
         </p>
     </div>
 </nav>

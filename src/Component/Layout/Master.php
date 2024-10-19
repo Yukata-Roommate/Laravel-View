@@ -18,25 +18,16 @@ class Master extends Component
     /**
      * constructor
      * 
-     * @param string $bodyClass
      * @param string|null $title
      */
-    public function __construct(string $bodyClass, string|null $title = null)
+    public function __construct(string|null $title = null)
     {
-        $this->setBodyClass($bodyClass);
         $this->setTitle($title);
     }
 
     /*----------------------------------------*
      * Property
      *----------------------------------------*/
-
-    /**
-     * body class
-     * 
-     * @var string
-     */
-    public string $bodyClass;
 
     /**
      * title
@@ -48,17 +39,6 @@ class Master extends Component
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
-
-    /**
-     * set body class
-     * 
-     * @param string $bodyClass
-     * @return void
-     */
-    protected function setBodyClass(string $bodyClass): void
-    {
-        $this->bodyClass = $bodyClass;
-    }
 
     /**
      * set title

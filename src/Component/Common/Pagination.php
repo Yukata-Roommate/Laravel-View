@@ -5,6 +5,7 @@ namespace YukataRm\Laravel\View\Component\Common;
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Collection;
 
 /**
  * Common Pagination Component
@@ -28,15 +29,81 @@ class Pagination extends Component
     }
 
     /*----------------------------------------*
+     * Attributes
+     *----------------------------------------*/
+
+    /**
+     * merge attributes
+     * 
+     * @return array<string, mixed>
+     */
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "class" => "d-flex justify-items-center justify-content-between align-items-center",
+        ];
+    }
+
+    /*----------------------------------------*
      * Property
      *----------------------------------------*/
 
     /**
-     * data
+     * links
      * 
-     * @var \Illuminate\Pagination\LengthAwarePaginator
+     * @var \Illuminate\Support\Collection
      */
-    public LengthAwarePaginator $data;
+    public Collection $links;
+
+    /**
+     * on first page
+     * 
+     * @var bool
+     */
+    public bool $onFirstPage;
+
+    /**
+     * previous page url
+     * 
+     * @var string|null
+     */
+    public string|null $previousPageUrl;
+
+    /**
+     * has more pages
+     * 
+     * @var bool
+     */
+    public bool $hasMorePages;
+
+    /**
+     * next page url
+     * 
+     * @var string|null
+     */
+    public string|null $nextPageUrl;
+
+    /**
+     * first item
+     * 
+     * @var int
+     */
+    public int $firstItem;
+
+    /**
+     * last item
+     * 
+     * @var int
+     */
+    public int $lastItem;
+
+    /**
+     * total
+     * 
+     * @var int
+     */
+    public int $total;
 
     /*----------------------------------------*
      * Method
@@ -50,6 +117,13 @@ class Pagination extends Component
      */
     protected function setData(LengthAwarePaginator $data): void
     {
-        $this->data = $data;
+        $this->links           = $data->linkCollection();
+        $this->onFirstPage     = $data->onFirstPage();
+        $this->previousPageUrl = $data->previousPageUrl();
+        $this->hasMorePages    = $data->hasMorePages();
+        $this->nextPageUrl     = $data->nextPageUrl();
+        $this->firstItem       = $data->firstItem() ?? 0;
+        $this->lastItem        = $data->lastItem() ?? 0;
+        $this->total           = $data->total();
     }
 }

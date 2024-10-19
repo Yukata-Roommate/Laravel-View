@@ -1,4 +1,4 @@
-<li class="nav-item">
+<li {{ $attributes->merge($merge) }}>
     <a class="{{ $navLinkClass }}" href="{{ $href }}">
         <i class="nav-icon bi {{ $icon }}"></i>
 

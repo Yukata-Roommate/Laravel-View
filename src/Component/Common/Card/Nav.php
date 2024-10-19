@@ -19,4 +19,21 @@ class Nav extends Component
      * constructor
      */
     public function __construct() {}
+
+    /*----------------------------------------*
+     * Attributes
+     *----------------------------------------*/
+
+    /**
+     * merge attributes
+     * 
+     * @return array<string, mixed>
+     */
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "class" => "card",
+        ];
+    }
 }

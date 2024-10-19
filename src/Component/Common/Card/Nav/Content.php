@@ -32,6 +32,27 @@ class Content extends Component
     }
 
     /*----------------------------------------*
+     * Attributes
+     *----------------------------------------*/
+
+    /**
+     * merge attributes
+     * 
+     * @return array<string, mixed>
+     */
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "id"              => $this->id,
+            "class"           => $this->class,
+            "aria-labelledby" => $this->ariaLabelledBy,
+            "role"            => "tabpanel",
+            "tabindex"        => 0,
+        ];
+    }
+
+    /*----------------------------------------*
      * Property
      *----------------------------------------*/
 
@@ -43,27 +64,27 @@ class Content extends Component
     public string $id;
 
     /**
-     * aria labelled by
-     * 
-     * @var string
-     */
-    public string $ariaLabelledBy;
-
-    /**
      * class
      * 
      * @var string
      */
     public string $class;
 
+    /**
+     * aria labelled by
+     * 
+     * @var string
+     */
+    public string $ariaLabelledBy;
+
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
 
     /**
-     * set title
+     * set key
      * 
-     * @param string $title
+     * @param string $key
      * @return void
      */
     protected function setKey(string $key): void

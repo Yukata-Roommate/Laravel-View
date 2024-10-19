@@ -34,6 +34,23 @@ class Item extends Component
     }
 
     /*----------------------------------------*
+     * Attributes
+     *----------------------------------------*/
+
+    /**
+     * merge attributes
+     * 
+     * @return array<string, mixed>
+     */
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "class" => "nav-item",
+        ];
+    }
+
+    /*----------------------------------------*
      * Property
      *----------------------------------------*/
 

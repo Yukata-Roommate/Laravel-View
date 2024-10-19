@@ -1,4 +1,4 @@
-<li class="breadcrumb-item">
+<li {{ $attributes->merge($merge) }}>
     <a href="{{ $url }}">
         {{ $title }}
     </a>

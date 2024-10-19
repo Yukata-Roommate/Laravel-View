@@ -1,6 +1,6 @@
 <div class="row mb-3">
     <div class="col-12">
-        <div class="card">
+        <div {{ $attributes->merge($merge) }}>
             <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs text-center" role="tablist">
                     {{ $items }}

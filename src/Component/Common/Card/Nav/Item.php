@@ -32,6 +32,24 @@ class Item extends Component
     }
 
     /*----------------------------------------*
+     * Attributes
+     *----------------------------------------*/
+
+    /**
+     * merge attributes
+     * 
+     * @return array<string, mixed>
+     */
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "class" => "nav-item",
+            "role"  => "presentation",
+        ];
+    }
+
+    /*----------------------------------------*
      * Property
      *----------------------------------------*/
 
@@ -68,9 +86,9 @@ class Item extends Component
      *---------------------------------------*/
 
     /**
-     * set title
+     * set key
      * 
-     * @param string $title
+     * @param string $key
      * @return void
      */
     protected function setKey(string $key): void
