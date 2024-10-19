@@ -26,7 +26,7 @@ class Hidden extends Component
      */
     public function __construct(bool|null $isHidden = null)
     {
-        $this->setIsHidden($isHidden);
+        $this->setIsHidden($isHidden ?? true);
     }
 
     /*----------------------------------------*

@@ -31,7 +31,7 @@ trait Check
      * @param bool|null $isChecked
      * @param bool|null $isRequired
      * @param bool|null $isDisabled
-     * @param bool|null $isinline
+     * @param bool|null $isInline
      * @param bool|null $isSwitch
      * @param bool|null $isReverse
      */
@@ -41,7 +41,7 @@ trait Check
         bool|null $isChecked = null,
         bool|null $isRequired = null,
         bool|null $isDisabled = null,
-        bool|null $isinline = null,
+        bool|null $isInline = null,
         bool|null $isSwitch = null,
         bool|null $isReverse = null
     ) {
@@ -50,7 +50,7 @@ trait Check
         $this->setIsChecked($isChecked);
         $this->setIsRequired($isRequired);
         $this->setIsDisabled($isDisabled);
-        $this->setIsInline($isinline);
+        $this->setIsInline($isInline);
         $this->setIsSwitch($isSwitch);
         $this->setIsReverse($isReverse);
 
@@ -89,7 +89,7 @@ trait Check
      * 
      * @var bool
      */
-    public bool $isinline;
+    public bool $isInline;
 
     /**
      * is switch
@@ -130,12 +130,12 @@ trait Check
     /**
      * set is inline
      * 
-     * @param bool|null $isinline
+     * @param bool|null $isInline
      * @return void
      */
-    protected function setIsInline(bool|null $isinline): void
+    protected function setIsInline(bool|null $isInline): void
     {
-        $this->isinline = $isinline ?? false;
+        $this->isInline = $isInline ?? false;
     }
 
     /**
@@ -169,11 +169,11 @@ trait Check
     {
         $checkClass = "form-check mb-3";
 
-        if ($this->isinline) $checkClass .= "form-check-inline";
+        if ($this->isInline) $checkClass .= " form-check-inline";
 
-        if ($this->isSwitch) $checkClass .= "form-switch";
+        if ($this->isSwitch) $checkClass .= " form-switch";
 
-        if ($this->isReverse) $checkClass .= "form-check-reverse";
+        if ($this->isReverse) $checkClass .= " form-check-reverse";
 
         $this->checkClass = $checkClass;
     }

@@ -32,6 +32,6 @@ trait IsHidden
      */
     public function setIsHidden(bool|null $isHidden): void
     {
-        $this->isHidden = $isHidden ?? true;
+        $this->isHidden = $isHidden ?? false;
     }
 }

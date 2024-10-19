@@ -1,5 +1,5 @@
 <x-yukata-rm::layout.master class="login-page bg-body-secondary app-loaded">
-    <x-form.template method="post" :action="$action">
+    <x-yukata-rm::form.template method="post" :action="$action">
         <div {{ $attributes->merge($merge) }}>
             <div class="card">
                 <div class="card-header bg-info">
@@ -9,7 +9,7 @@
                 </div>
 
                 <div class="card-body login-card-body">
-                    <x-form.errors />
+                    <x-yukata-rm::form.errors />
 
                     {{ $slot }}
                 </div>
@@ -19,5 +19,5 @@
                 </div>
             </div>
         </div>
-    </x-form.template>
+    </x-yukata-rm::form.template>
 </x-yukata-rm::layout.master>

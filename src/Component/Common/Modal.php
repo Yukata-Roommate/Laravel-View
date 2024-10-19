@@ -18,11 +18,13 @@ class Modal extends Component
     /**
      * constructor
      * 
-     * @param string|null $title
+     * @param string $id
+     * @param bool|null $isStrict
      */
-    public function __construct(string|null $title = null)
+    public function __construct(string $id, bool|null $isStrict = null)
     {
-        $this->setTitle($title);
+        $this->setId($id);
+        $this->setIsStrict($isStrict);
     }
 
     /*----------------------------------------*
@@ -37,9 +39,20 @@ class Modal extends Component
     #[\Override]
     protected function mergeAttributes(): array
     {
-        return [
-            "class" => "card",
+        $attributes = [
+            "id"              => $this->id,
+            "aria-labelledby" => $this->ariaLabelledBy,
+            "class"           => "modal fade",
+            "tabindex"        => "-1",
+            "aria-hidden"     => "true",
         ];
+
+        if ($this->isStrict) {
+            $attributes["data-bs-backdrop"] = "static";
+            $attributes["data-bs-keyboard"] = "false";
+        }
+
+        return $attributes;
     }
 
     /*----------------------------------------*
@@ -47,24 +60,50 @@ class Modal extends Component
      *----------------------------------------*/
 
     /**
-     * title
+     * id
      * 
-     * @var string|null
+     * @var string
      */
-    public string|null $title;
-
-    /*----------------------------------------*
-     * Method
-     *---------------------------------------*/
+    public string $id;
 
     /**
-     * set title
+     * aria labelled by
      * 
-     * @param string|null $title
+     * @var string
+     */
+    public string $ariaLabelledBy;
+
+    /**
+     * is strict
+     * 
+     * @var bool
+     */
+    public bool $isStrict;
+
+    /*----------------------------------------*
+     * Methods
+     *----------------------------------------*/
+
+    /**
+     * set id
+     * 
+     * @param string $id
      * @return void
      */
-    protected function setTitle(string|null $title): void
+    protected function setId(string $id): void
     {
-        $this->title = $title;
+        $this->id             = $id;
+        $this->ariaLabelledBy = "{$id}Label";
+    }
+
+    /**
+     * set is strict
+     * 
+     * @param bool|null $isStrict
+     * @return void
+     */
+    protected function setIsStrict(bool|null $isStrict): void
+    {
+        $this->isStrict = $isStrict ?? false;
     }
 }
