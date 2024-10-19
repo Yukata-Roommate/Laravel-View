@@ -1,13 +1,13 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common\Card\Nav;
+namespace YukataRm\Laravel\View\Trait;
 
 /**
  * Nav trait
  * 
- * @package YukataRm\Laravel\View\Component\Common\Card\Nav
+ * @package YukataRm\Laravel\View\Trait
  */
-trait NavTrait
+trait Nav
 {
     /**
      * get nav item id

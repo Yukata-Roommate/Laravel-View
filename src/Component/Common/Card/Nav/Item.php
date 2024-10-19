@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Component\Common\Card\Nav;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
-use YukataRm\Laravel\View\Component\Common\Card\Nav\NavTrait;
+use YukataRm\Laravel\View\Trait\Nav;
 
 /**
  * Common Card Nav Item Component
@@ -13,7 +13,7 @@ use YukataRm\Laravel\View\Component\Common\Card\Nav\NavTrait;
  */
 class Item extends Component
 {
-    use NavTrait;
+    use Nav;
 
     /*----------------------------------------*
      * Constructor
