@@ -30,6 +30,22 @@ abstract class BaseComponent extends Component
      */
     public function render(): ViewContract|Htmlable|Closure|string
     {
+        $this->setMergeAttributes();
+
+        return $this->componentView();
+    }
+
+    /*----------------------------------------*
+     * View
+     *----------------------------------------*/
+
+    /**
+     * get component view
+     * 
+     * @return \Illuminate\Contracts\View\View
+     */
+    protected function componentView(): ViewContract
+    {
         return view($this->component());
     }
 
@@ -38,7 +54,38 @@ abstract class BaseComponent extends Component
      * 
      * @return string
      */
-    abstract public function component(): string;
+    abstract protected function component(): string;
+
+    /*----------------------------------------*
+     * Attributes
+     *----------------------------------------*/
+
+    /**
+     * merge attributes
+     * 
+     * @var array<string, mixed>
+     */
+    public array $merge = [];
+
+    /**
+     * set merged attributes
+     * 
+     * @return void
+     */
+    protected function setMergeAttributes(): void
+    {
+        $this->merge = $this->mergeAttributes();
+    }
+
+    /**
+     * merge attributes
+     * 
+     * @return array<string, mixed>
+     */
+    protected function mergeAttributes(): array
+    {
+        return [];
+    }
 
     /*----------------------------------------*
      * HTML

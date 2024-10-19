@@ -51,7 +51,7 @@ class Alerts extends Component
      * 
      * @return void
      */
-    public function setSuccess(): void
+    protected function setSuccess(): void
     {
         $this->success = $this->getSessionMessage("success");
     }
@@ -61,7 +61,7 @@ class Alerts extends Component
      * 
      * @return void
      */
-    public function setFailure(): void
+    protected function setFailure(): void
     {
         $this->failure = $this->getSessionMessage("failure");
     }

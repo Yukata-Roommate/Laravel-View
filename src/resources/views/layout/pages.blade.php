@@ -1,5 +1,5 @@
-<x-yukata-rm::layout.master :title="$pageTitle" :body-class="$bodyClass">
-    <div class="app-wrapper">
+<x-yukata-rm::layout.master :title="$pageTitle" class="layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded">
+    <div {{ $attributes->merge($merge) }}>
         <x-yukata-rm::layout.pages.header>
             {{ $header }}
         </x-yukata-rm::layout.pages.header>

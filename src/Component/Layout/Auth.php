@@ -28,15 +28,26 @@ class Auth extends Component
     }
 
     /*----------------------------------------*
-     * Property
+     * Attributes
      *----------------------------------------*/
 
     /**
-     * body class
+     * merge attributes
      * 
-     * @var string
+     * @return array<string, mixed>
      */
-    public string $bodyClass = "login-page bg-body-secondary app-loaded";
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "class" => "login-box",
+            "style" => "width: 360px;",
+        ];
+    }
+
+    /*----------------------------------------*
+     * Property
+     *----------------------------------------*/
 
     /**
      * card title
@@ -62,7 +73,7 @@ class Auth extends Component
      * @param string $cardTitle
      * @return void
      */
-    public function setCardTitle(string $cardTitle): void
+    protected function setCardTitle(string $cardTitle): void
     {
         $this->cardTitle = $cardTitle;
     }
@@ -73,7 +84,7 @@ class Auth extends Component
      * @param string $action
      * @return void
      */
-    public function setAction(string $action): void
+    protected function setAction(string $action): void
     {
         $this->action = $action;
     }

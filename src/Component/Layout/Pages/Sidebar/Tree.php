@@ -89,7 +89,7 @@ class Tree extends Component
      * @param string $routePrefix
      * @return void
      */
-    public function setRoutePrefix(string $routePrefix): void
+    protected function setRoutePrefix(string $routePrefix): void
     {
         $this->routePrefix = $routePrefix;
     }
@@ -100,7 +100,7 @@ class Tree extends Component
      * @param string $icon
      * @return void
      */
-    public function setIcon(string $icon): void
+    protected function setIcon(string $icon): void
     {
         $this->icon = $icon;
     }
@@ -111,7 +111,7 @@ class Tree extends Component
      * @param string $title
      * @return void
      */
-    public function setTitle(string $title): void
+    protected function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -121,7 +121,7 @@ class Tree extends Component
      * 
      * @return void
      */
-    public function setNavItemClass(): void
+    protected function setNavItemClass(): void
     {
         $this->navItemClass = $this->isRouteNameStartsWith($this->routePrefix)
             ? "nav-item menu-open"
@@ -133,7 +133,7 @@ class Tree extends Component
      * 
      * @return void
      */
-    public function setNavLinkClass(): void
+    protected function setNavLinkClass(): void
     {
         $this->navLinkClass = $this->isRouteNameStartsWith($this->routePrefix)
             ? "nav-link active"
@@ -145,7 +145,7 @@ class Tree extends Component
      * 
      * @return void
      */
-    public function setNavStyle(): void
+    protected function setNavStyle(): void
     {
         $this->navStyle = $this->isRouteNameStartsWith($this->routePrefix)
             ? "box-sizing: border-box; display: block;"

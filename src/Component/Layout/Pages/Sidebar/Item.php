@@ -82,7 +82,7 @@ class Item extends Component
      * @param string $routePrefix
      * @return void
      */
-    public function setRoutePrefix(string $routePrefix): void
+    protected function setRoutePrefix(string $routePrefix): void
     {
         $this->routePrefix = $routePrefix;
     }
@@ -93,7 +93,7 @@ class Item extends Component
      * @param string $href
      * @return void
      */
-    public function setHref(string $href): void
+    protected function setHref(string $href): void
     {
         $this->href = $href;
     }
@@ -104,7 +104,7 @@ class Item extends Component
      * @param string $icon
      * @return void
      */
-    public function setIcon(string $icon): void
+    protected function setIcon(string $icon): void
     {
         $this->icon = $icon;
     }
@@ -115,7 +115,7 @@ class Item extends Component
      * @param string $title
      * @return void
      */
-    public function setTitle(string $title): void
+    protected function setTitle(string $title): void
     {
         $this->title = $title;
     }
@@ -125,7 +125,7 @@ class Item extends Component
      * 
      * @return void
      */
-    public function setNavLinkClass(): void
+    protected function setNavLinkClass(): void
     {
         $this->navLinkClass = $this->isRouteNameStartsWith($this->routePrefix)
             ? "nav-link active"

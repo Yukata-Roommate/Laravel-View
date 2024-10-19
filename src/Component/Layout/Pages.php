@@ -26,15 +26,25 @@ class Pages extends Component
     }
 
     /*----------------------------------------*
-     * Property
+     * Attributes
      *----------------------------------------*/
 
     /**
-     * body class
+     * merge attributes
      * 
-     * @var string
+     * @return array<string, mixed>
      */
-    public string $bodyClass = "layout-fixed sidebar-expand-lg bg-body-tertiary app-loaded";
+    #[\Override]
+    protected function mergeAttributes(): array
+    {
+        return [
+            "class" => "app-wrapper",
+        ];
+    }
+
+    /*----------------------------------------*
+     * Property
+     *----------------------------------------*/
 
     /**
      * page title
@@ -53,7 +63,7 @@ class Pages extends Component
      * @param string $pageTitle
      * @return void
      */
-    public function setPageTitle(string $pageTitle): void
+    protected function setPageTitle(string $pageTitle): void
     {
         $this->pageTitle = $pageTitle;
     }

@@ -1,6 +1,6 @@
-<x-yukata-rm::layout.master :body-class="$bodyClass">
+<x-yukata-rm::layout.master class="login-page bg-body-secondary app-loaded">
     <x-form.template method="post" :action="$action">
-        <div class="login-box" style="width: 360px;">
+        <div {{ $attributes->merge($merge) }}>
             <div class="card">
                 <div class="card-header bg-info">
                     <h1 class="mb-0 text-center text-light">

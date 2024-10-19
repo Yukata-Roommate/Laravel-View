@@ -20,7 +20,7 @@ abstract class BaseComponent extends Component
      * 
      * @return string
      */
-    public function component(): string
+    protected function component(): string
     {
         return "{$this->componentPrefix}::{$this->componentKey()}";
     }
