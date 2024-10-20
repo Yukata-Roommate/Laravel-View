@@ -41,7 +41,7 @@ class Item extends Component
     {
         $class = "border border-3 rounded-3 p-3";
 
-        if ($this->last) $class .= " mb-3";
+        if (!$this->last) $class .= " mb-3";
 
         return [
             "class" => $class,

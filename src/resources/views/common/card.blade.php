@@ -2,9 +2,9 @@
     <div class="col-12">
         <div {{ $attributes->merge($merge) }}>
             <div class="card-header">
-                @isset($title)
+                @isset($cardTitle)
                     <p class="card-title h2 m-0">
-                        {{ $title }}
+                        {{ $cardTitle }}
                     </p>
                 @endisset
 
@@ -14,7 +14,7 @@
             </div>
 
             <div class="card-body">
-                {{ $body }}
+                {{ $slot }}
             </div>
 
             @isset($footer)

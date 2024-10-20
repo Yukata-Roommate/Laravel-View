@@ -18,11 +18,11 @@ class Card extends Component
     /**
      * constructor
      * 
-     * @param string|null $title
+     * @param string|null $cardTitle
      */
-    public function __construct(string|null $title = null)
+    public function __construct(string|null $cardTitle = null)
     {
-        $this->setTitle($title);
+        $this->setCardTitle($cardTitle);
     }
 
     /*----------------------------------------*
@@ -47,24 +47,24 @@ class Card extends Component
      *----------------------------------------*/
 
     /**
-     * title
+     * cardTitle
      * 
      * @var string|null
      */
-    public string|null $title;
+    public string|null $cardTitle;
 
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
 
     /**
-     * set title
+     * set card title
      * 
-     * @param string|null $title
+     * @param string|null $cardTitle
      * @return void
      */
-    protected function setTitle(string|null $title): void
+    public function setCardTitle(string|null $cardTitle): void
     {
-        $this->title = $title;
+        $this->cardTitle = $cardTitle;
     }
 }
