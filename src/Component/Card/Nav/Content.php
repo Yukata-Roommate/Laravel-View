@@ -1,17 +1,17 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common\Card\Nav;
+namespace YukataRm\Laravel\View\Component\Card\Nav;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 use YukataRm\Laravel\View\Trait\Nav;
 
 /**
- * Common Card Nav Item Component
+ * Card Nav Content Component
  * 
- * @package YukataRm\Laravel\View\Component\Common\Card\Nav
+ * @package YukataRm\Laravel\View\Component\Card\Nav
  */
-class Item extends Component
+class Content extends Component
 {
     use Nav;
 
@@ -44,8 +44,11 @@ class Item extends Component
     protected function mergeAttributes(): array
     {
         return [
-            "class" => "nav-item",
-            "role"  => "presentation",
+            "id"              => $this->id,
+            "class"           => $this->class,
+            "aria-labelledby" => $this->ariaLabelledBy,
+            "role"            => "tabpanel",
+            "tabindex"        => 0,
         ];
     }
 
@@ -61,13 +64,6 @@ class Item extends Component
     public string $id;
 
     /**
-     * aria controls
-     * 
-     * @var string
-     */
-    public string $ariaControls;
-
-    /**
      * class
      * 
      * @var string
@@ -75,11 +71,11 @@ class Item extends Component
     public string $class;
 
     /**
-     * aria selected
+     * aria labelled by
      * 
      * @var string
      */
-    public string $ariaSelected;
+    public string $ariaLabelledBy;
 
     /*----------------------------------------*
      * Method
@@ -93,8 +89,8 @@ class Item extends Component
      */
     protected function setKey(string $key): void
     {
-        $this->id           = $this->navItemId($key);
-        $this->ariaControls = $this->navContentId($key);
+        $this->id             = $this->navContentId($key);
+        $this->ariaLabelledBy = $this->navItemId($key);
     }
 
     /**
@@ -105,7 +101,6 @@ class Item extends Component
      */
     protected function setActive(bool $active): void
     {
-        $this->class        = $active ? "nav-link active" : "nav-link";
-        $this->ariaSelected = $active ? "true" : "false";
+        $this->class = $active ? "tab-pane fade active show" : "tab-pane fade";
     }
 }

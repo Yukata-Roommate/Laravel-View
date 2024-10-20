@@ -1,13 +1,13 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common\Card;
+namespace YukataRm\Laravel\View\Component\Card;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Common Card Nav Component
+ * Card Nav Component
  * 
- * @package YukataRm\Laravel\View\Component\Common\Card
+ * @package YukataRm\Laravel\View\Component\Card
  */
 class Nav extends Component
 {

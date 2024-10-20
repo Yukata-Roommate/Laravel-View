@@ -1,15 +1,15 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common\Breadcrumb;
+namespace YukataRm\Laravel\View\Component\Item;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Common Breadcrumb Active Component
+ * Item Inline Component
  * 
- * @package YukataRm\Laravel\View\Component\Common\Breadcrumb
+ * @package YukataRm\Laravel\View\Component\Item
  */
-class Active extends Component
+class Inline extends Component
 {
     /*----------------------------------------*
      * Constructor
@@ -18,11 +18,11 @@ class Active extends Component
     /**
      * constructor
      * 
-     * @param string $title
+     * @param bool|null $last
      */
-    public function __construct(string $title)
+    public function __construct(bool|null $last = null)
     {
-        $this->setTitle($title);
+        $this->setLast($last);
     }
 
     /*----------------------------------------*
@@ -37,9 +37,12 @@ class Active extends Component
     #[\Override]
     protected function mergeAttributes(): array
     {
+        $class = "d-inline-block border border-3 rounded-3 px-2 py-1 my-1";
+
+        if (!$this->last) $class .= " me-2";
+
         return [
-            "class"        => "breadcrumb-item active",
-            "aria-current" => "page",
+            "class" => $class,
         ];
     }
 
@@ -48,24 +51,24 @@ class Active extends Component
      *----------------------------------------*/
 
     /**
-     * title
+     * last
      * 
-     * @var string
+     * @var bool
      */
-    public string $title;
+    public bool $last;
 
     /*----------------------------------------*
-     * Method
-     *---------------------------------------*/
+     * Methods
+     *----------------------------------------*/
 
     /**
-     * set title
+     * set last
      * 
-     * @param string $title
+     * @param bool|null $last
      * @return void
      */
-    protected function setTitle(string $title): void
+    public function setLast(bool|null $last): void
     {
-        $this->title = $title;
+        $this->last = $last ?? false;
     }
 }

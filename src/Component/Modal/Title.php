@@ -1,15 +1,15 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common;
+namespace YukataRm\Laravel\View\Component\Modal;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Common Item Component
+ * Modal Title Component
  * 
- * @package YukataRm\Laravel\View\Component\Common
+ * @package YukataRm\Laravel\View\Component\Modal
  */
-class Item extends Component
+class Title extends Component
 {
     /*----------------------------------------*
      * Constructor
@@ -19,12 +19,10 @@ class Item extends Component
      * constructor
      * 
      * @param string $title
-     * @param bool|null $last
      */
-    public function __construct(string $title, bool|null $last = null)
+    public function __construct(string $title)
     {
         $this->setTitle($title);
-        $this->setLast($last);
     }
 
     /*----------------------------------------*
@@ -39,12 +37,8 @@ class Item extends Component
     #[\Override]
     protected function mergeAttributes(): array
     {
-        $class = "border border-3 rounded-3 p-3";
-
-        if (!$this->last) $class .= " mb-3";
-
         return [
-            "class" => $class,
+            "class" => "h5 modal-title",
         ];
     }
 
@@ -59,13 +53,6 @@ class Item extends Component
      */
     public string $title;
 
-    /**
-     * last
-     * 
-     * @var bool
-     */
-    public bool $last;
-
     /*----------------------------------------*
      * Methods
      *----------------------------------------*/
@@ -79,16 +66,5 @@ class Item extends Component
     public function setTitle(string $title): void
     {
         $this->title = $title;
-    }
-
-    /**
-     * set last
-     * 
-     * @param bool|null $last
-     * @return void
-     */
-    public function setLast(bool|null $last): void
-    {
-        $this->last = $last ?? false;
     }
 }

@@ -1,17 +1,17 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common;
+namespace YukataRm\Laravel\View\Component;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 use YukataRm\Laravel\View\Trait\Link;
 
 /**
- * Common Anchor Component
+ * Button Component
  * 
- * @package YukataRm\Laravel\View\Component\Common
+ * @package YukataRm\Laravel\View\Component
  */
-class Anchor extends Component
+class Button extends Component
 {
     use Link;
 
@@ -22,23 +22,20 @@ class Anchor extends Component
     /**
      * constructor
      * 
-     * @param string $href
      * @param string $color
-     * @param bool|null $blank
+     * @param string|null $type
      * @param bool|null $block
      * @param bool|null $small
      * @param bool|null $outline
      */
     public function __construct(
-        string $href,
         string $color,
-        bool|null $blank = null,
+        string|null $type = null,
         bool|null $block = null,
         bool|null $small = null,
         bool|null $outline = null,
     ) {
-        $this->setHref($href);
-        $this->setBlank($blank);
+        $this->setType($type);
 
         $this->setColor($color);
         $this->setBlock($block);
@@ -60,12 +57,7 @@ class Anchor extends Component
     {
         $attributes = $this->getDefaultMergeAttributes();
 
-        $attributes["href"] = $this->href;
-
-        if ($this->blank) {
-            $attributes["target"] = "_blank";
-            $attributes["rel"]    = "noopener noreferrer";
-        }
+        $attributes["type"] = $this->type;
 
         return $attributes;
     }
@@ -75,42 +67,24 @@ class Anchor extends Component
      *----------------------------------------*/
 
     /**
-     * href
+     * type
      * 
      * @var string
      */
-    public string $href;
-
-    /**
-     * blank
-     * 
-     * @var bool
-     */
-    public bool $blank;
+    public string $type;
 
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
 
     /**
-     * set href
+     * set type
      * 
-     * @param string $href
+     * @param string|null $type
      * @return void
      */
-    protected function setHref(string $href): void
+    protected function setType(string|null $type): void
     {
-        $this->href = $href;
-    }
-
-    /**
-     * set blank
-     * 
-     * @param bool|null $blank
-     * @return void
-     */
-    protected function setBlank(bool|null $blank): void
-    {
-        $this->blank = $blank ?? false;
+        $this->type = $type ?? "button";
     }
 }

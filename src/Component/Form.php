@@ -1,17 +1,17 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Form;
+namespace YukataRm\Laravel\View\Component;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 use YukataRm\Laravel\View\Trait\Form\IsHidden;
 
 /**
- * Form Template Component
+ * Form Component
  * 
- * @package YukataRm\Laravel\View\Component\Form
+ * @package YukataRm\Laravel\View\Component
  */
-class Template extends Component
+class Form extends Component
 {
     use IsHidden;
 
@@ -51,7 +51,7 @@ class Template extends Component
     #[\Override]
     protected function mergeAttributes(): array
     {
-        $attributes = parent::mergeAttributes();
+        $attributes = [];
 
         $attributes["method"] = match ($this->isMethodCompatible) {
             true  => $this->method,

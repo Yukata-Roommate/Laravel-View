@@ -1,6 +1,6 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common;
+namespace YukataRm\Laravel\View\Component;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
@@ -8,9 +8,9 @@ use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
 /**
- * Common Pagination Component
+ * Pagination Component
  * 
- * @package YukataRm\Laravel\View\Component\Common
+ * @package YukataRm\Laravel\View\Component
  */
 class Pagination extends Component
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common;
+namespace YukataRm\Laravel\View\Component;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Common Modal Component
+ * Modal Component
  * 
- * @package YukataRm\Laravel\View\Component\Common
+ * @package YukataRm\Laravel\View\Component
  */
 class Modal extends Component
 {

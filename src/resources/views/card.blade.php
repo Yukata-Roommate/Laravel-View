@@ -1,9 +1,11 @@
-<div {{ $attributes->merge($merge) }}>
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
+<div class="row mb-3">
+    <div class="col-12">
+        <div {{ $attributes->merge($merge) }}>
+            <div class="card-header">
                 @isset($title)
-                    <x-yukata-rm::common.modal.title :title="$title" />
+                    <p class="card-title h2 m-0">
+                        {{ $title }}
+                    </p>
                 @endisset
 
                 @isset($header)
@@ -11,12 +13,12 @@
                 @endisset
             </div>
 
-            <div class="modal-body">
+            <div class="card-body">
                 {{ $slot }}
             </div>
 
             @isset($footer)
-                <div class="modal-footer">
+                <div class="card-footer">
                     {{ $footer }}
                 </div>
             @endisset

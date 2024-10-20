@@ -1,13 +1,13 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common;
+namespace YukataRm\Laravel\View\Component;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Common Card Component
+ * Card Component
  * 
- * @package YukataRm\Laravel\View\Component\Common
+ * @package YukataRm\Laravel\View\Component
  */
 class Card extends Component
 {
@@ -18,11 +18,11 @@ class Card extends Component
     /**
      * constructor
      * 
-     * @param string|null $cardTitle
+     * @param string|null $title
      */
-    public function __construct(string|null $cardTitle = null)
+    public function __construct(string|null $title = null)
     {
-        $this->setCardTitle($cardTitle);
+        $this->setTitle($title);
     }
 
     /*----------------------------------------*
@@ -47,24 +47,24 @@ class Card extends Component
      *----------------------------------------*/
 
     /**
-     * cardTitle
+     * title
      * 
      * @var string|null
      */
-    public string|null $cardTitle;
+    public string|null $title;
 
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
 
     /**
-     * set card title
+     * set title
      * 
-     * @param string|null $cardTitle
+     * @param string|null $title
      * @return void
      */
-    public function setCardTitle(string|null $cardTitle): void
+    public function setTitle(string|null $title): void
     {
-        $this->cardTitle = $cardTitle;
+        $this->title = $title;
     }
 }

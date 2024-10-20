@@ -1,15 +1,15 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component\Common;
+namespace YukataRm\Laravel\View\Component\Breadcrumb;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
- * Common Breadcrumb Component
+ * Breadcrumb Active Component
  * 
- * @package YukataRm\Laravel\View\Component\Common
+ * @package YukataRm\Laravel\View\Component\Breadcrumb
  */
-class Breadcrumb extends Component
+class Active extends Component
 {
     /*----------------------------------------*
      * Constructor
@@ -19,12 +19,10 @@ class Breadcrumb extends Component
      * constructor
      * 
      * @param string $title
-     * @param string $url
      */
-    public function __construct(string $title, string $url)
+    public function __construct(string $title)
     {
         $this->setTitle($title);
-        $this->setUrl($url);
     }
 
     /*----------------------------------------*
@@ -40,7 +38,8 @@ class Breadcrumb extends Component
     protected function mergeAttributes(): array
     {
         return [
-            "class" => "breadcrumb-item",
+            "class"        => "breadcrumb-item active",
+            "aria-current" => "page",
         ];
     }
 
@@ -55,13 +54,6 @@ class Breadcrumb extends Component
      */
     public string $title;
 
-    /**
-     * url
-     * 
-     * @var string
-     */
-    public string $url;
-
     /*----------------------------------------*
      * Method
      *---------------------------------------*/
@@ -75,16 +67,5 @@ class Breadcrumb extends Component
     protected function setTitle(string $title): void
     {
         $this->title = $title;
-    }
-
-    /**
-     * set url
-     * 
-     * @param string|null $url
-     * @return void
-     */
-    protected function setUrl(string|null $url): void
-    {
-        $this->url = $url;
     }
 }
