@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\Button;
 
 /**
  * Modal Button Close Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Modal\Button
  */
 class Close extends Button
@@ -17,7 +17,7 @@ class Close extends Button
 
     /**
      * constructor
-     * 
+     *
      * @param string|null $color
      * @param bool|null $block
      * @param bool|null $small
@@ -44,7 +44,7 @@ class Close extends Button
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

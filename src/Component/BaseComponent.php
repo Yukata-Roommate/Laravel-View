@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\BaseComponent as Component;
 
 /**
  * Base Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 abstract class BaseComponent extends Component
@@ -17,7 +17,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get component
-     * 
+     *
      * @return string
      */
     protected function component(): string
@@ -27,7 +27,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get component key
-     * 
+     *
      * @return string
      */
     protected function componentKey(): string
@@ -47,14 +47,14 @@ abstract class BaseComponent extends Component
 
     /**
      * component prefix
-     * 
+     *
      * @var string
      */
     protected string $componentPrefix = "yukata-rm";
 
     /**
      * component common namespace
-     * 
+     *
      * @var string
      */
     protected string $namespace = "YukataRm\\Laravel\\View\\Component\\";

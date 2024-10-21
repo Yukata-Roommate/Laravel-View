@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Table Header Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Table
  */
 class Header extends Component

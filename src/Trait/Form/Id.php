@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait\Form;
 
 /**
  * Form Id trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait Id
@@ -15,7 +15,7 @@ trait Id
 
     /**
      * id
-     * 
+     *
      * @var string
      */
     public string $id;
@@ -26,7 +26,7 @@ trait Id
 
     /**
      * set id
-     * 
+     *
      * @param string $id
      * @return void
      */

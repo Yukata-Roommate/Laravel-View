@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Modal Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Modal extends Component
@@ -17,7 +17,7 @@ class Modal extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $modalId
      * @param string|null $title
      * @param bool|null $isStrict
@@ -35,7 +35,7 @@ class Modal extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -63,28 +63,28 @@ class Modal extends Component
 
     /**
      * id
-     * 
+     *
      * @var string
      */
     public string $id;
 
     /**
      * aria labelled by
-     * 
+     *
      * @var string
      */
     public string $ariaLabelledBy;
 
     /**
      * title
-     * 
+     *
      * @var string|null
      */
     public string|null $title;
 
     /**
      * is strict
-     * 
+     *
      * @var bool
      */
     public bool $isStrict;
@@ -95,7 +95,7 @@ class Modal extends Component
 
     /**
      * set id
-     * 
+     *
      * @param string $id
      * @return void
      */
@@ -107,7 +107,7 @@ class Modal extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string|null $title
      * @return void
      */
@@ -118,7 +118,7 @@ class Modal extends Component
 
     /**
      * set is strict
-     * 
+     *
      * @param bool|null $isStrict
      * @return void
      */

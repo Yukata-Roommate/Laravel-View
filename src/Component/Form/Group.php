@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Form Group Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form
  */
 class Group extends Component
@@ -26,7 +26,7 @@ class Group extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

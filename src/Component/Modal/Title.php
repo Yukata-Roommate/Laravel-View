@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Modal Title Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Modal
  */
 class Title extends Component
@@ -17,7 +17,7 @@ class Title extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $title
      */
     public function __construct(string $title)
@@ -31,7 +31,7 @@ class Title extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -48,7 +48,7 @@ class Title extends Component
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
@@ -59,7 +59,7 @@ class Title extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string $title
      * @return void
      */

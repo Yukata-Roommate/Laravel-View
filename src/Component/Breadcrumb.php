@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Breadcrumb Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Breadcrumb extends Component
@@ -17,7 +17,7 @@ class Breadcrumb extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $title
      * @param string $url
      */
@@ -33,7 +33,7 @@ class Breadcrumb extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -50,14 +50,14 @@ class Breadcrumb extends Component
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
 
     /**
      * url
-     * 
+     *
      * @var string
      */
     public string $url;
@@ -68,7 +68,7 @@ class Breadcrumb extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -79,7 +79,7 @@ class Breadcrumb extends Component
 
     /**
      * set url
-     * 
+     *
      * @param string|null $url
      * @return void
      */

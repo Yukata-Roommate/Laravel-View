@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Card Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Card extends Component
@@ -17,7 +17,7 @@ class Card extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string|null $title
      */
     public function __construct(string|null $title = null)
@@ -31,7 +31,7 @@ class Card extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -48,7 +48,7 @@ class Card extends Component
 
     /**
      * title
-     * 
+     *
      * @var string|null
      */
     public string|null $title;
@@ -59,7 +59,7 @@ class Card extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string|null $title
      * @return void
      */

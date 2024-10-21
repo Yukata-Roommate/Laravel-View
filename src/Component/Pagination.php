@@ -9,7 +9,7 @@ use Illuminate\Support\Collection;
 
 /**
  * Pagination Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Pagination extends Component
@@ -20,7 +20,7 @@ class Pagination extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param LengthAwarePaginator $data
      */
     public function __construct(LengthAwarePaginator $data)
@@ -34,7 +34,7 @@ class Pagination extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -51,56 +51,56 @@ class Pagination extends Component
 
     /**
      * links
-     * 
+     *
      * @var \Illuminate\Support\Collection
      */
     public Collection $links;
 
     /**
      * on first page
-     * 
+     *
      * @var bool
      */
     public bool $onFirstPage;
 
     /**
      * previous page url
-     * 
+     *
      * @var string|null
      */
     public string|null $previousPageUrl;
 
     /**
      * has more pages
-     * 
+     *
      * @var bool
      */
     public bool $hasMorePages;
 
     /**
      * next page url
-     * 
+     *
      * @var string|null
      */
     public string|null $nextPageUrl;
 
     /**
      * first item
-     * 
+     *
      * @var int
      */
     public int $firstItem;
 
     /**
      * last item
-     * 
+     *
      * @var int
      */
     public int $lastItem;
 
     /**
      * total
-     * 
+     *
      * @var int
      */
     public int $total;
@@ -111,7 +111,7 @@ class Pagination extends Component
 
     /**
      * set data
-     * 
+     *
      * @param \Illuminate\Pagination\LengthAwarePaginator $data
      * @return void
      */

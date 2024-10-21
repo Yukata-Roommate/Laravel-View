@@ -12,7 +12,7 @@ use YukataRm\Laravel\View\Trait\Form\IsReadonly;
 
 /**
  * Form Select Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form
  */
 class Select extends Component
@@ -29,7 +29,7 @@ class Select extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $id
      * @param string $label
      * @param bool|null $isRequired
@@ -56,7 +56,7 @@ class Select extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

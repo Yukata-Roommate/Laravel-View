@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Button Group Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Button
  */
 class Group extends Component
@@ -17,7 +17,7 @@ class Group extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $position
      */
     public function __construct(string $position)
@@ -31,7 +31,7 @@ class Group extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -57,7 +57,7 @@ class Group extends Component
 
     /**
      * position
-     * 
+     *
      * @var string
      */
     public string $position;
@@ -68,7 +68,7 @@ class Group extends Component
 
     /**
      * set position
-     * 
+     *
      * @param string $position
      * @return void
      */

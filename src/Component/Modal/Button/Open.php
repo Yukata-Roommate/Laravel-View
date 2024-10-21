@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\Button;
 
 /**
  * Modal Button Open Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Modal\Button
  */
 class Open extends Button
@@ -17,7 +17,7 @@ class Open extends Button
 
     /**
      * constructor
-     * 
+     *
      * @param string $modalId
      * @param string|null $color
      * @param bool|null $block
@@ -48,7 +48,7 @@ class Open extends Button
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -69,7 +69,7 @@ class Open extends Button
 
     /**
      * modal id
-     * 
+     *
      * @var string
      */
     public string $modalId;
@@ -80,7 +80,7 @@ class Open extends Button
 
     /**
      * set modal id
-     * 
+     *
      * @param string $modalId
      * @return void
      */

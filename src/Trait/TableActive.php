@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait;
 
 /**
  * Table Active trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait
  */
 trait TableActive
@@ -15,7 +15,7 @@ trait TableActive
 
     /**
      * active
-     * 
+     *
      * @var bool
      */
     public bool $active;
@@ -26,7 +26,7 @@ trait TableActive
 
     /**
      * get default merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     protected function getDefaultMergeAttributes(): array
@@ -36,7 +36,7 @@ trait TableActive
 
     /**
      * set active
-     * 
+     *
      * @param bool|null $active
      * @return void
      */

@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\Form\IsHidden;
 
 /**
  * Form Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Form extends Component
@@ -21,7 +21,7 @@ class Form extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $method
      * @param bool|null $hasFile
      * @param bool|null $isHidden
@@ -45,7 +45,7 @@ class Form extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -76,28 +76,28 @@ class Form extends Component
 
     /**
      * method
-     * 
+     *
      * @var string
      */
     public string $method;
 
     /**
      * is method compatible
-     * 
+     *
      * @var bool
      */
     public bool $isMethodCompatible;
 
     /**
      * has file
-     * 
+     *
      * @var bool
      */
     public bool $hasFile;
 
     /**
      * target blank
-     * 
+     *
      * @var bool
      */
     public bool $targetBlank;
@@ -108,7 +108,7 @@ class Form extends Component
 
     /**
      * set method
-     * 
+     *
      * @param string $method
      * @return void
      */
@@ -124,7 +124,7 @@ class Form extends Component
 
     /**
      * set has file
-     * 
+     *
      * @param bool|null $hasFile
      * @return void
      */
@@ -135,7 +135,7 @@ class Form extends Component
 
     /**
      * set target blank
-     * 
+     *
      * @param bool|null $targetBlank
      * @return void
      */

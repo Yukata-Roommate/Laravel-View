@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\Form\Label;
 
 /**
  * Form Select Option Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form\Select
  */
 class Option extends Component
@@ -21,7 +21,7 @@ class Option extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $label
      * @param bool|null $isSelected
      */
@@ -39,7 +39,7 @@ class Option extends Component
 
     /**
      * is selected
-     * 
+     *
      * @var bool
      */
     public bool $isSelected;
@@ -50,7 +50,7 @@ class Option extends Component
 
     /**
      * set is selected
-     * 
+     *
      * @param bool|null $isSelected
      * @return void
      */

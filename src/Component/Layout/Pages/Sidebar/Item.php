@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Layout Pages Sidebar Item Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Layout\Pages\Sidebar
  */
 class Item extends Component
@@ -17,7 +17,7 @@ class Item extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $prefix
      * @param string $href
      * @param string $icon
@@ -39,7 +39,7 @@ class Item extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -56,35 +56,35 @@ class Item extends Component
 
     /**
      * route prefix
-     * 
+     *
      * @var string
      */
     public string $routePrefix;
 
     /**
      * href
-     * 
+     *
      * @var string
      */
     public string $href;
 
     /**
      * icon
-     * 
+     *
      * @var string
      */
     public string $icon;
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
 
     /**
      * nav link class
-     * 
+     *
      * @var string
      */
     public string $navLinkClass;
@@ -95,7 +95,7 @@ class Item extends Component
 
     /**
      * set route prefix
-     * 
+     *
      * @param string $routePrefix
      * @return void
      */
@@ -106,7 +106,7 @@ class Item extends Component
 
     /**
      * set href
-     * 
+     *
      * @param string $href
      * @return void
      */
@@ -117,7 +117,7 @@ class Item extends Component
 
     /**
      * set icon
-     * 
+     *
      * @param string $icon
      * @return void
      */
@@ -128,7 +128,7 @@ class Item extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -139,7 +139,7 @@ class Item extends Component
 
     /**
      * set nav link class
-     * 
+     *
      * @return void
      */
     protected function setNavLinkClass(): void

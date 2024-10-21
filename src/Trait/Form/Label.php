@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait\Form;
 
 /**
  * Form Label trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait Label
@@ -15,7 +15,7 @@ trait Label
 
     /**
      * label
-     * 
+     *
      * @var string
      */
     public string $label;
@@ -26,7 +26,7 @@ trait Label
 
     /**
      * set label
-     * 
+     *
      * @param string $label
      * @return void
      */

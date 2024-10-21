@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait\Form;
 
 /**
  * Form Is Required trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait IsRequired
@@ -15,7 +15,7 @@ trait IsRequired
 
     /**
      * is required
-     * 
+     *
      * @var bool
      */
     public bool $isRequired;
@@ -26,7 +26,7 @@ trait IsRequired
 
     /**
      * set is required
-     * 
+     *
      * @param bool|null $isRequired
      * @return void
      */

@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\Nav;
 
 /**
  * Card Nav Item Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Card\Nav
  */
 class Item extends Component
@@ -21,7 +21,7 @@ class Item extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $key
      * @param bool $active
      */
@@ -37,7 +37,7 @@ class Item extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -55,28 +55,28 @@ class Item extends Component
 
     /**
      * id
-     * 
+     *
      * @var string
      */
     public string $id;
 
     /**
      * aria controls
-     * 
+     *
      * @var string
      */
     public string $ariaControls;
 
     /**
      * class
-     * 
+     *
      * @var string
      */
     public string $class;
 
     /**
      * aria selected
-     * 
+     *
      * @var string
      */
     public string $ariaSelected;
@@ -87,7 +87,7 @@ class Item extends Component
 
     /**
      * set key
-     * 
+     *
      * @param string $key
      * @return void
      */
@@ -99,7 +99,7 @@ class Item extends Component
 
     /**
      * set active
-     * 
+     *
      * @param bool $active
      * @return void
      */

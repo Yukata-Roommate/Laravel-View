@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait\Form;
 
 /**
  * Form Is Readonly trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait IsReadonly
@@ -15,7 +15,7 @@ trait IsReadonly
 
     /**
      * is readonly
-     * 
+     *
      * @var bool
      */
     public bool $isReadonly;
@@ -26,7 +26,7 @@ trait IsReadonly
 
     /**
      * set is readonly
-     * 
+     *
      * @param bool|null $isReadonly
      * @return void
      */

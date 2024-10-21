@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Layout Pages Sidebar Tree Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Layout\Pages\Sidebar
  */
 class Tree extends Component
@@ -17,7 +17,7 @@ class Tree extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $prefix
      * @param string $icon
      * @param string $title
@@ -39,7 +39,7 @@ class Tree extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -56,42 +56,42 @@ class Tree extends Component
 
     /**
      * route prefix
-     * 
+     *
      * @var string
      */
     public string $routePrefix;
 
     /**
      * icon
-     * 
+     *
      * @var string
      */
     public string $icon;
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
 
     /**
      * nav item class
-     * 
+     *
      * @var string
      */
     public string $navItemClass;
 
     /**
      * nav link class
-     * 
+     *
      * @var string
      */
     public string $navLinkClass;
 
     /**
      * nav style
-     * 
+     *
      * @var string
      */
     public string $navStyle;
@@ -102,7 +102,7 @@ class Tree extends Component
 
     /**
      * set route prefix
-     * 
+     *
      * @param string $routePrefix
      * @return void
      */
@@ -113,7 +113,7 @@ class Tree extends Component
 
     /**
      * set icon
-     * 
+     *
      * @param string $icon
      * @return void
      */
@@ -124,7 +124,7 @@ class Tree extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -135,7 +135,7 @@ class Tree extends Component
 
     /**
      * set nav item class
-     * 
+     *
      * @return void
      */
     protected function setNavItemClass(): void
@@ -147,7 +147,7 @@ class Tree extends Component
 
     /**
      * set nav link class
-     * 
+     *
      * @return void
      */
     protected function setNavLinkClass(): void
@@ -159,7 +159,7 @@ class Tree extends Component
 
     /**
      * set nav style
-     * 
+     *
      * @return void
      */
     protected function setNavStyle(): void

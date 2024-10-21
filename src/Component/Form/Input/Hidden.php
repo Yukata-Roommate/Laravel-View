@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\Form\IsHidden;
 
 /**
  * Form Input Hidden Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form\Input
  */
 class Hidden extends Component
@@ -21,7 +21,7 @@ class Hidden extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param bool|null $isHidden
      */
     public function __construct(bool|null $isHidden = null)
@@ -35,7 +35,7 @@ class Hidden extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Breadcrumb Active Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Breadcrumb
  */
 class Active extends Component
@@ -17,7 +17,7 @@ class Active extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $title
      */
     public function __construct(string $title)
@@ -31,7 +31,7 @@ class Active extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -49,7 +49,7 @@ class Active extends Component
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
@@ -60,7 +60,7 @@ class Active extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string $title
      * @return void
      */

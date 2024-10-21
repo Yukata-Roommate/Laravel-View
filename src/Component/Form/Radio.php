@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\Form\Check;
 
 /**
  * Form Radio Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form
  */
 class Radio extends Component
@@ -21,7 +21,7 @@ class Radio extends Component
 
     /**
      * get component key
-     * 
+     *
      * @return string
      */
     #[\Override]
@@ -38,7 +38,7 @@ class Radio extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Layout Master Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Layout
  */
 class Master extends Component
@@ -17,7 +17,7 @@ class Master extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string|null $title
      */
     public function __construct(string|null $title = null)
@@ -31,7 +31,7 @@ class Master extends Component
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
@@ -42,7 +42,7 @@ class Master extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string|null $title
      * @return void
      */

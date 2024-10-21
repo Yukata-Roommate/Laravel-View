@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\View;
 
 /**
  * Base Component
- * 
+ *
  * @package YukataRm\Laravel\View
  */
 abstract class BaseComponent extends Component
@@ -25,7 +25,7 @@ abstract class BaseComponent extends Component
 
     /**
      * render component
-     * 
+     *
      * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\Support\Htmlable|\Closure|string
      */
     public function render(): ViewContract|Htmlable|Closure|string
@@ -41,7 +41,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get component view
-     * 
+     *
      * @return \Illuminate\Contracts\View\View
      */
     protected function componentView(): ViewContract
@@ -51,7 +51,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get component
-     * 
+     *
      * @return string
      */
     abstract protected function component(): string;
@@ -62,14 +62,14 @@ abstract class BaseComponent extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @var array<string, mixed>
      */
     public array $merge = [];
 
     /**
      * set merged attributes
-     * 
+     *
      * @return void
      */
     protected function setMergeAttributes(): void
@@ -79,7 +79,7 @@ abstract class BaseComponent extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     protected function mergeAttributes(): array
@@ -93,7 +93,7 @@ abstract class BaseComponent extends Component
 
     /**
      * escape html special characters and convert newline code to br tag
-     * 
+     *
      * @param string $text
      * @return string
      */
@@ -108,7 +108,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether user is logged in
-     * 
+     *
      * @return bool
      */
     public function isLoggedIn(): bool
@@ -122,7 +122,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get Request instance
-     * 
+     *
      * @return \Illuminate\Http\Request
      */
     public function request(): Request
@@ -132,7 +132,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get route name
-     * 
+     *
      * @return string
      */
     public function routeName(): string
@@ -142,7 +142,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether route name is matched
-     * 
+     *
      * @param string $routeName
      * @return bool
      */
@@ -153,7 +153,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether route name is contained
-     * 
+     *
      * @param string $routeName
      * @return bool
      */
@@ -164,7 +164,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether route name starts with
-     * 
+     *
      * @param string $routeName
      * @return bool
      */
@@ -175,7 +175,7 @@ abstract class BaseComponent extends Component
 
     /**
      * get route prefix
-     * 
+     *
      * @return string
      */
     public function routePrefix(): string
@@ -185,7 +185,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether route prefix is matched
-     * 
+     *
      * @param string $routePrefix
      * @return bool
      */
@@ -196,7 +196,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether route prefix is contained
-     * 
+     *
      * @param string $routePrefix
      * @return bool
      */
@@ -211,7 +211,7 @@ abstract class BaseComponent extends Component
 
     /**
      * whether user has section
-     * 
+     *
      * @param string $section
      * @return bool
      */

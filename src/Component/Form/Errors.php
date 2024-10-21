@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Form Errors Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form
  */
 class Errors extends Component

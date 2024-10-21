@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\TableActive;
 
 /**
  * Table Row Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Table
  */
 class Row extends Component
@@ -21,7 +21,7 @@ class Row extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param bool|null $active
      */
     public function __construct(bool|null $active = null)
@@ -35,7 +35,7 @@ class Row extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

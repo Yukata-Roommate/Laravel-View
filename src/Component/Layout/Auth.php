@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Layout Auth Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Layout
  */
 class Auth extends Component
@@ -17,7 +17,7 @@ class Auth extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $cardTitle
      * @param string $action
      */
@@ -33,7 +33,7 @@ class Auth extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -51,14 +51,14 @@ class Auth extends Component
 
     /**
      * card title
-     * 
+     *
      * @var string
      */
     public string $cardTitle;
 
     /**
      * action
-     * 
+     *
      * @var string
      */
     public string $action;
@@ -69,7 +69,7 @@ class Auth extends Component
 
     /**
      * set card title
-     * 
+     *
      * @param string $cardTitle
      * @return void
      */
@@ -80,7 +80,7 @@ class Auth extends Component
 
     /**
      * set action
-     * 
+     *
      * @param string $action
      * @return void
      */

@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Item Inline Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Item
  */
 class Inline extends Component
@@ -17,7 +17,7 @@ class Inline extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param bool|null $last
      */
     public function __construct(bool|null $last = null)
@@ -31,7 +31,7 @@ class Inline extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -52,7 +52,7 @@ class Inline extends Component
 
     /**
      * last
-     * 
+     *
      * @var bool
      */
     public bool $last;
@@ -63,7 +63,7 @@ class Inline extends Component
 
     /**
      * set last
-     * 
+     *
      * @param bool|null $last
      * @return void
      */

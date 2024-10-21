@@ -9,7 +9,7 @@ use YukataRm\Laravel\View\Trait\Form\IsDisabled;
 
 /**
  * Form Check trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait Check
@@ -25,7 +25,7 @@ trait Check
 
     /**
      * constructor
-     * 
+     *
      * @param string $id
      * @param string $label
      * @param bool|null $isChecked
@@ -63,7 +63,7 @@ trait Check
 
     /**
      * default merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     protected function defaultMergeAttributes(): array
@@ -79,35 +79,35 @@ trait Check
 
     /**
      * is checked
-     * 
+     *
      * @var bool
      */
     public bool $isChecked;
 
     /**
      * is inline
-     * 
+     *
      * @var bool
      */
     public bool $isInline;
 
     /**
      * is switch
-     * 
+     *
      * @var bool
      */
     public bool $isSwitch;
 
     /**
      * is reverse
-     * 
+     *
      * @var bool
      */
     public bool $isReverse;
 
     /**
      * check class
-     * 
+     *
      * @var string
      */
     public string $checkClass;
@@ -118,7 +118,7 @@ trait Check
 
     /**
      * set is checked
-     * 
+     *
      * @param bool|null $isChecked
      * @return void
      */
@@ -129,7 +129,7 @@ trait Check
 
     /**
      * set is inline
-     * 
+     *
      * @param bool|null $isInline
      * @return void
      */
@@ -140,7 +140,7 @@ trait Check
 
     /**
      * set is switch
-     * 
+     *
      * @param bool|null $isSwitch
      * @return void
      */
@@ -151,7 +151,7 @@ trait Check
 
     /**
      * set is reverse
-     * 
+     *
      * @param bool|null $isReverse
      * @return void
      */
@@ -162,7 +162,7 @@ trait Check
 
     /**
      * set check class
-     * 
+     *
      * @return void
      */
     protected function setCheckClass(): void

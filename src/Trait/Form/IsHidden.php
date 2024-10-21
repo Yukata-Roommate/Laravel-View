@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait\Form;
 
 /**
  * Form Is Hidden trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait IsHidden
@@ -15,7 +15,7 @@ trait IsHidden
 
     /**
      * is hidden
-     * 
+     *
      * @var bool
      */
     public bool $isHidden;
@@ -26,7 +26,7 @@ trait IsHidden
 
     /**
      * set is hidden
-     * 
+     *
      * @param bool|null $isHidden
      * @return void
      */

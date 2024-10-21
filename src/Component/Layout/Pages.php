@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Layout Pages Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Layout
  */
 class Pages extends Component
@@ -17,7 +17,7 @@ class Pages extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $pageTitle
      */
     public function __construct(string $pageTitle)
@@ -31,7 +31,7 @@ class Pages extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -48,7 +48,7 @@ class Pages extends Component
 
     /**
      * page title
-     * 
+     *
      * @var string
      */
     public string $pageTitle;
@@ -59,7 +59,7 @@ class Pages extends Component
 
     /**
      * set page title
-     * 
+     *
      * @param string $pageTitle
      * @return void
      */

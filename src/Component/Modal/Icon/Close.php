@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Modal Icon Close Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Modal\Icon
  */
 class Close extends Component
@@ -26,7 +26,7 @@ class Close extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]

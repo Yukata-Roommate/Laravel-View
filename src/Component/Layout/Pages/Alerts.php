@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Layout Pages Alerts Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Layout\Pages
  */
 class Alerts extends Component
@@ -30,14 +30,14 @@ class Alerts extends Component
 
     /**
      * success message
-     * 
+     *
      * @var string|null
      */
     public string|null $success;
 
     /**
      * failure message
-     * 
+     *
      * @var string|null
      */
     public string|null $failure;
@@ -48,7 +48,7 @@ class Alerts extends Component
 
     /**
      * set success message
-     * 
+     *
      * @return void
      */
     protected function setSuccess(): void
@@ -58,7 +58,7 @@ class Alerts extends Component
 
     /**
      * set failure message
-     * 
+     *
      * @return void
      */
     protected function setFailure(): void
@@ -68,7 +68,7 @@ class Alerts extends Component
 
     /**
      * get session message
-     * 
+     *
      * @param string $key
      * @return string|null
      */

@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Item Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Item extends Component
@@ -17,7 +17,7 @@ class Item extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $title
      * @param bool|null $last
      */
@@ -33,7 +33,7 @@ class Item extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -54,14 +54,14 @@ class Item extends Component
 
     /**
      * title
-     * 
+     *
      * @var string
      */
     public string $title;
 
     /**
      * last
-     * 
+     *
      * @var bool
      */
     public bool $last;
@@ -72,7 +72,7 @@ class Item extends Component
 
     /**
      * set title
-     * 
+     *
      * @param string $title
      * @return void
      */
@@ -83,7 +83,7 @@ class Item extends Component
 
     /**
      * set last
-     * 
+     *
      * @param bool|null $last
      * @return void
      */

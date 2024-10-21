@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait\Form;
 
 /**
  * Form Is Disabled trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait\Form
  */
 trait IsDisabled
@@ -15,7 +15,7 @@ trait IsDisabled
 
     /**
      * is disabled
-     * 
+     *
      * @var bool
      */
     public bool $isDisabled;
@@ -26,7 +26,7 @@ trait IsDisabled
 
     /**
      * set is disabled
-     * 
+     *
      * @param bool|null $isDisabled
      * @return void
      */

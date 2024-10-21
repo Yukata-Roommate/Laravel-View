@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Trait;
 
 /**
  * Button Style trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait
  */
 trait ButtonStyle
@@ -15,28 +15,28 @@ trait ButtonStyle
 
     /**
      * color
-     * 
+     *
      * @var string
      */
     public string $color;
 
     /**
      * block
-     * 
+     *
      * @var bool|null
      */
     public bool|null $block;
 
     /**
      * small
-     * 
+     *
      * @var bool|null
      */
     public bool|null $small;
 
     /**
      * outline
-     * 
+     *
      * @var bool|null
      */
     public bool|null $outline;
@@ -47,7 +47,7 @@ trait ButtonStyle
 
     /**
      * get default merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     protected function getDefaultMergeAttributes(): array
@@ -67,7 +67,7 @@ trait ButtonStyle
 
     /**
      * set color
-     * 
+     *
      * @param string $color
      * @return void
      */
@@ -78,7 +78,7 @@ trait ButtonStyle
 
     /**
      * set block
-     * 
+     *
      * @param bool|null $block
      * @return void
      */
@@ -89,7 +89,7 @@ trait ButtonStyle
 
     /**
      * set small
-     * 
+     *
      * @param bool|null $small
      * @return void
      */
@@ -100,7 +100,7 @@ trait ButtonStyle
 
     /**
      * set outline
-     * 
+     *
      * @param bool|null $outline
      * @return void
      */

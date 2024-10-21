@@ -6,7 +6,7 @@ use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
 /**
  * Table Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Table extends Component
@@ -17,7 +17,7 @@ class Table extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string|null $color
      * @param bool|null $hover
      * @param bool|null $striped
@@ -41,7 +41,7 @@ class Table extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -68,28 +68,28 @@ class Table extends Component
 
     /**
      * color
-     * 
+     *
      * @var string|null
      */
     public string|null $color;
 
     /**
      * hover
-     * 
+     *
      * @var bool
      */
     public bool $hover;
 
     /**
      * striped
-     * 
+     *
      * @var bool
      */
     public bool $striped;
 
     /**
      * stripedColumns
-     * 
+     *
      * @var bool
      */
     public bool $stripedColumns;
@@ -100,7 +100,7 @@ class Table extends Component
 
     /**
      * set color
-     * 
+     *
      * @param string|null $color
      * @return void
      */
@@ -111,7 +111,7 @@ class Table extends Component
 
     /**
      * set hover
-     * 
+     *
      * @param bool|null $hover
      * @return void
      */
@@ -122,7 +122,7 @@ class Table extends Component
 
     /**
      * set striped
-     * 
+     *
      * @param bool|null $striped
      * @return void
      */
@@ -133,7 +133,7 @@ class Table extends Component
 
     /**
      * set stripedColumns
-     * 
+     *
      * @param bool|null $stripedColumns
      * @return void
      */

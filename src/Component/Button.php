@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\ButtonStyle;
 
 /**
  * Button Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component
  */
 class Button extends Component
@@ -21,7 +21,7 @@ class Button extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $color
      * @param string|null $type
      * @param bool|null $block
@@ -49,7 +49,7 @@ class Button extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -68,7 +68,7 @@ class Button extends Component
 
     /**
      * type
-     * 
+     *
      * @var string
      */
     public string $type;
@@ -79,7 +79,7 @@ class Button extends Component
 
     /**
      * set type
-     * 
+     *
      * @param string|null $type
      * @return void
      */

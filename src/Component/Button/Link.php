@@ -8,7 +8,7 @@ use YukataRm\Laravel\View\Trait\ButtonStyle;
 
 /**
  * Button Link Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Button
  */
 class Link extends Component
@@ -21,7 +21,7 @@ class Link extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $href
      * @param string $color
      * @param bool|null $blank
@@ -52,7 +52,7 @@ class Link extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -76,14 +76,14 @@ class Link extends Component
 
     /**
      * href
-     * 
+     *
      * @var string
      */
     public string $href;
 
     /**
      * blank
-     * 
+     *
      * @var bool
      */
     public bool $blank;
@@ -94,7 +94,7 @@ class Link extends Component
 
     /**
      * set href
-     * 
+     *
      * @param string $href
      * @return void
      */
@@ -105,7 +105,7 @@ class Link extends Component
 
     /**
      * set blank
-     * 
+     *
      * @param bool|null $blank
      * @return void
      */

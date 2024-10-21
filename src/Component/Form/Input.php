@@ -12,7 +12,7 @@ use YukataRm\Laravel\View\Trait\Form\IsReadonly;
 
 /**
  * Form Input Component
- * 
+ *
  * @package YukataRm\Laravel\View\Component\Form
  */
 class Input extends Component
@@ -29,7 +29,7 @@ class Input extends Component
 
     /**
      * constructor
-     * 
+     *
      * @param string $id
      * @param string $label
      * @param string|null $type
@@ -59,7 +59,7 @@ class Input extends Component
 
     /**
      * merge attributes
-     * 
+     *
      * @return array<string, mixed>
      */
     #[\Override]
@@ -77,7 +77,7 @@ class Input extends Component
 
     /**
      * type
-     * 
+     *
      * @var string
      */
     public string $type;
@@ -88,7 +88,7 @@ class Input extends Component
 
     /**
      * set type
-     * 
+     *
      * @param string|null $type
      * @return void
      */

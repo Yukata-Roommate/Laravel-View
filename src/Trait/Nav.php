@@ -4,14 +4,14 @@ namespace YukataRm\Laravel\View\Trait;
 
 /**
  * Nav trait
- * 
+ *
  * @package YukataRm\Laravel\View\Trait
  */
 trait Nav
 {
     /**
      * get nav item id
-     * 
+     *
      * @param string $key
      * @return string
      */
@@ -22,7 +22,7 @@ trait Nav
 
     /**
      * get nav content id
-     * 
+     *
      * @param string $key
      * @return string
      */
