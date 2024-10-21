@@ -1,19 +1,19 @@
 <?php
 
-namespace YukataRm\Laravel\View\Component;
+namespace YukataRm\Laravel\View\Component\Button;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
-use YukataRm\Laravel\View\Trait\Link;
+use YukataRm\Laravel\View\Trait\ButtonStyle;
 
 /**
- * Anchor Component
+ * Button Link Component
  * 
- * @package YukataRm\Laravel\View\Component
+ * @package YukataRm\Laravel\View\Component\Button
  */
-class Anchor extends Component
+class Link extends Component
 {
-    use Link;
+    use ButtonStyle;
 
     /*----------------------------------------*
      * Constructor

@@ -4,7 +4,7 @@ namespace YukataRm\Laravel\View\Component;
 
 use YukataRm\Laravel\View\Component\BaseComponent as Component;
 
-use YukataRm\Laravel\View\Trait\Link;
+use YukataRm\Laravel\View\Trait\ButtonStyle;
 
 /**
  * Button Component
@@ -13,7 +13,7 @@ use YukataRm\Laravel\View\Trait\Link;
  */
 class Button extends Component
 {
-    use Link;
+    use ButtonStyle;
 
     /*----------------------------------------*
      * Constructor

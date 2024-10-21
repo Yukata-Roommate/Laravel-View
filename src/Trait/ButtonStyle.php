@@ -3,11 +3,11 @@
 namespace YukataRm\Laravel\View\Trait;
 
 /**
- * Link trait
+ * Button Style trait
  * 
  * @package YukataRm\Laravel\View\Trait
  */
-trait Link
+trait ButtonStyle
 {
     /*----------------------------------------*
      * Property
